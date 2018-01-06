@@ -72,13 +72,14 @@ pip3 uninstall chatterbot
 pip3 install --upgrade setuptools
 pip3 install git+git://github.com/gunthercox/ChatterBot.git@master
 
-# Install MongoDB on MacOS (For others OS see: https://docs.mongodb.com/manual/installation/
+# Install MongoDB 
+On MacOS (For others OS see: https://docs.mongodb.com/manual/installation/
 brew install mongodb
 brew install mongodb --with-openssl
 mkdir -p data_chatbot/db # Set permissions
 
 # Install espeak
-# on Mac:
+On Mac:
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
 brew install espeak
 export PATH=$PATH:/usr/local/bin/
@@ -86,9 +87,3 @@ export PATH=$PATH:/usr/local/bin/
 # run mongodb
 mongod --dbpath <path to data directory>
 mongod --dbpath <path to data directory>
-
-# Run the script rpyc_server.sh on a terminal (on EV3)
-./rpyc_server.sh
-
-
-
