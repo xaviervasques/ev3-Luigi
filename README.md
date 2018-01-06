@@ -59,30 +59,31 @@ I use python 3
 
 Install pip3
 Install virtualenv
-sudo pip3 install virtualenv
-virtualenv ENV # Where ENV is a directory to place the new environnement (ENV/lib/, ENV/include/, And the packages will live under ENV/lib/pythonX.X/site-packages/, ENV/bin where all the executables are)
-source bin/activate # This resides in ENV/bin/ (To undo just run deactivate command)
-sudo apt-get install python3-pip
+  sudo pip3 install virtualenv
+  virtualenv ENV
+Where ENV is a directory to place the new environnement (ENV/lib/, ENV/include/, And the packages will live under ENV/lib/pythonX.X/site-packages/, ENV/bin where all the executables are)
+  source bin/activate # This resides in ENV/bin/ (To undo just run deactivate command)
+  sudo apt-get install python3-pip
 
 # Install ev3 environnement locally
-sudo pip3 install python-ev3dev
+  sudo pip3 install python-ev3dev
 
 # Install ChatterBot
-pip3 uninstall chatterbot
-pip3 install --upgrade setuptools
-pip3 install git+git://github.com/gunthercox/ChatterBot.git@master
+  pip3 uninstall chatterbot
+  pip3 install --upgrade setuptools
+  pip3 install git+git://github.com/gunthercox/ChatterBot.git@master
 
 # Install MongoDB 
 On MacOS (For others OS see: https://docs.mongodb.com/manual/installation/
-brew install mongodb
-brew install mongodb --with-openssl
-mkdir -p data_chatbot/db # Set permissions
+  brew install mongodb
+  brew install mongodb --with-openssl
+  mkdir -p data_chatbot/db # Set permissions
 
 # Install espeak
 On Mac:
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
-brew install espeak
-export PATH=$PATH:/usr/local/bin/
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
+  brew install espeak
+  export PATH=$PATH:/usr/local/bin/
 
 # run mongodb
 mongod --dbpath <path to data directory>
